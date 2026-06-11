@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Live Translate",
   description:
-    "Real-time broadcast translation powered by the Gemini Live API.",
+    "Real-time broadcast translation powered by Eburon AI + Orbit.",
 };
 
 export default function RootLayout({

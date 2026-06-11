@@ -444,6 +444,7 @@ body {
    —————————————————————————————————————— */
 
 .room-shell {
+
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -480,6 +481,18 @@ body {
   gap: 12px;
   border-bottom: 1px solid var(--border-light);
 }
+
+/* Sticky header for mobile */
+.room-chrome--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+   background: rgba(246, 244, 240, 0.92);
+   -webkit-backdrop-filter: blur(8px);
+   backdrop-filter: blur(8px);
+}
+
 
 .chrome-meta {
   display: flex;
@@ -689,6 +702,10 @@ body {
    —————————————————————————————————————— */
 
 .control-bar {
+  position: sticky;
+  bottom: 0;
+  z-index: 40;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -846,6 +863,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   user-select: all;
+  -webkit-user-select: all;
 }
 
 .invite-card-btn {

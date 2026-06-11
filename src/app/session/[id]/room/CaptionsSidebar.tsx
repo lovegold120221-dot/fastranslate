@@ -36,7 +36,7 @@ export default function CaptionsSidebar({
   // Each TextStream is one append from the agent. Group chunks into one entry
   // per *utterance*: append chunks from the same speaker into the entry that's
   // currently "open" for that speaker, and seal it when the agent sends a
-  // `final="true"` boundary marker (one is emitted on every Gemini
+  // `final="true"` boundary marker (one is emitted on every turnComplete
   // `turnComplete`). The next non-final chunk from the same speaker then
   // starts a fresh entry — one utterance per line.
   const entries = useMemo(() => {

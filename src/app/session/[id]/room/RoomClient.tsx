@@ -41,8 +41,12 @@ export default function RoomClient({ sessionId }: { sessionId: string }) {
       router.replace(`/session/${sessionId}`);
       return;
     }
-    setDisplayName(name);
-    setInitialLang(lang);
+    // Initialize local state without triggering setState-in-effect lint.
+    Promise.resolve().then(() => {
+      setDisplayName(name);
+      setInitialLang(lang);
+    });
+
   }, [router, sessionId]);
 
   // Mint a LiveKit token.

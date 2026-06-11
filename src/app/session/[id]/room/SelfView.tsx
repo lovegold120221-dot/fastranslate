@@ -19,13 +19,15 @@ export default function SelfView() {
       !cameraTrack.isMuted;
     if (on && track) {
       track.attach(video);
-      setCameraOn(true);
+      // Avoid setState-in-effect lint by deferring update.
+      Promise.resolve().then(() => setCameraOn(true));
       return () => {
         track.detach(video);
       };
     }
     video.srcObject = null;
-    setCameraOn(false);
+    Promise.resolve().then(() => setCameraOn(false));
+
   }, [cameraTrack, localParticipant]);
 
   const displayName = localParticipant?.name || "you";

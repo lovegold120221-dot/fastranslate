@@ -63,7 +63,7 @@ export default function Home() {
           {[
             "Pick your language and turn on your camera",
             "Share the link with everyone joining the call",
-            "Each language pair spins up one Gemini session on demand",
+            "Each language pair spins up one Orbit session on demand",
           ].map((text, i) => (
             <div key={i}>
               <div
@@ -88,7 +88,7 @@ export default function Home() {
 
         {/* Footer */}
         <p className="mono enter-d4" style={{ marginTop: 48 }}>
-          Powered by Gemini Live API + LiveKit
+          Powered by Eburon AI + Orbit
         </p>
       </div>
     </div>

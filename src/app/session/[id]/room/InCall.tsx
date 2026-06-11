@@ -72,7 +72,7 @@ export default function InCall({
     >
       <div className="room">
         {/* Top chrome */}
-        <header className="room-chrome">
+        <header className="room-chrome room-chrome--sticky">
           <div className="chrome-meta">
             <span>
               {humanRemotes.length + 1}{" "}

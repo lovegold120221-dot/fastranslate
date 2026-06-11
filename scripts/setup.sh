@@ -11,7 +11,7 @@ fi
 
 if [[ ! -f translator/.env.local ]]; then
   cp translator/.env.example translator/.env.local
-  echo "→ Created translator/.env.local — fill in your LiveKit + Gemini credentials"
+  echo "→ Created translator/.env.local — fill in your LiveKit + Eburon AI credentials"
 fi
 
 echo "→ Installing frontend deps (pnpm)…"
