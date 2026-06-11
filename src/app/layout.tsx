@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { AuthProvider } from "@/lib/firebase/auth";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Live Translate",
-  description:
-    "Real-time broadcast translation powered by Eburon AI + Orbit.",
+  title: "Orbit",
+  description: "Multi-language video calls powered by Eburon AI.",
 };
 
 export default function RootLayout({
@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }
