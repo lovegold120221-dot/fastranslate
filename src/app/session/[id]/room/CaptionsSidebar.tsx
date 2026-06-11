@@ -108,7 +108,7 @@ export default function CaptionsSidebar({
   return (
     <aside
       className={`captions${open ? " open" : ""}`}
-      aria-hidden={!open}
+      {...(!open ? { "aria-hidden": "true" } : {})}
     >
       {/* Inner has a fixed width so the outer can animate its width 0 -> 380px
           without the content reflowing / squishing along the way. */}
